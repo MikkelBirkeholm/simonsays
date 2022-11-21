@@ -5,6 +5,8 @@ const savedDot = document.querySelector('#saved')
 const copyBtn = document.querySelector('#copy-text')
 const profileImage = document.querySelector('#profileImage')
 
+chrome.storage.sync.get(console.log)
+
 
 window.onload = () => {
 	let recentImage = localStorage.getItem('image')

@@ -7,7 +7,6 @@
     <script src="/app.js" type="module"></script>
     <script src="assets/js/noter.js" type="module"></script>
     <script src="assets/js/tools.js" defer></script>
-
     <title>Simon Says</title>
 </head>
 <body>
@@ -53,12 +52,16 @@
                     </span>
                     </div>
                   </div>
+                  <span class="hint">Kom i flow med 25 minutters pomodoro-sessions</span>
             </div>
+            <div class="wrapper">
             <div class="container">
               <div class="checkbox-wrapper-2">
                 <label>Læs op
                 <input type="checkbox" class="sc-gJwTLC ikxBAC" id="speaker"></label>
               </div>
+            </div>
+            <span class="hint">Slå til og marker tekst for at få det læst op. Undgå at markere tekst fra YayText</span>
             </div>
         </ul>
     </header>
@@ -80,16 +83,24 @@
         </div>
 
         <div id="content">
-            <grammarly-editor-plugin>
         <textarea id="notes" class="noscrollbar" maxlength="3000">
         </textarea>
-            </grammarly-editor-plugin>
         </div>
             <ul id="tipsList">
             </ul>
     </section>
     <dialog id="postPreview" class="noscrollbar">
-        <button id="closePreview">Luk</button>
+        <div id="preview-tools">
+            <div id="line-clamps">
+                <span class="hint">Juster fold</span>
+                <button value="2" class="line-btn">2</button>
+                <button value="3" class="line-btn">3</button>
+                <button value="4" class="line-btn">4</button>
+                <button value="5" class="line-btn">5</button>
+                <button value="6" class="line-btn">6</button>
+            </div>
+            <button id="closePreview">Luk</button>
+            </div>
         <div id="profilePreview">
             <div id="profileImage" class="profileImage"></div>
             <div id="profileInfo">
@@ -100,6 +111,7 @@
                     </span></span>
             </div>
         </div>
+        
         <p id="postContent" class="short-text">
             <p id="readMore">...læs mere</p>
         </p>

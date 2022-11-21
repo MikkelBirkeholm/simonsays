@@ -6,6 +6,8 @@ let userTitle = 'Webudvikler | Digitale Tools | SaaS';
 let emoji = document.querySelector('#emoji')
 let checkboxList = document.querySelectorAll('.checkbox')
 let readMoreBtn = document.querySelector('#readMore')
+let lineClampBtns = document.querySelectorAll('.line-btn')
+let shortText = document.querySelector('.short-text')
 
 let tipsList = document.querySelector('#tipsList')
 let tipsArray = [
@@ -64,13 +66,16 @@ previewBtn.addEventListener('click', ()=>{
     profileTitle.innerText = userTitle
     profileImage.style.backgroundImage = '#fefefe'
     postContent.innerText = notes.value
-    chrome.storage.sync.get({
-      profile_name: 'LinkedIn Name',
-      profile_title: 'LinkedIn Title'
-    }, function(items) {
-      document.getElementById('profileName').value = items.profile_name;
-      document.getElementById('profileTitle').value = items. profile_title;
-    });
+
+    chrome.storage.sync.get(['profile_name'], function(result) {
+      document.querySelector('#profileName').innerText = result.profile_name
+      });
+  
+      chrome.storage.sync.get(['profile_title'], function(result) {
+      document.querySelector('#profileTitle').innerText = result.profile_title
+      });
+
+      adjustLineClamp()
     postPreview.showModal()
 })
 
@@ -86,3 +91,12 @@ readMoreBtn.addEventListener('click', ()=> {
     readMoreBtn.innerText = '...læs mere'
   }
 })
+
+function adjustLineClamp() {
+  for(let btn of lineClampBtns) {
+    btn.addEventListener('click', (e) => {
+      shortText.style.webkitLineClamp = e.currentTarget.value
+    })
+  }
+  
+}

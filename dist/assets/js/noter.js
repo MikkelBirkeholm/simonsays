@@ -1,14 +1,11 @@
-import * as Grammarly from '/assets/js/grammarly.js'
-
-
-// Grammarly.init('client_WaWRVyNisdLVLh1jhouWGn')
-
 const notes = document.querySelector('#notes')
 let savedNote;
 const count = document.querySelector('#count')
 const savedDot = document.querySelector('#saved')
 const copyBtn = document.querySelector('#copy-text')
 const profileImage = document.querySelector('#profileImage')
+
+chrome.storage.sync.get(console.log)
 
 
 window.onload = () => {

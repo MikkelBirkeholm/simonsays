@@ -6,6 +6,7 @@
 
 :root {
     --color-text-dark: #172744;
+    --color-text-grey: #818181;
     --green: #60b86d;
     --yellow: #beaa26;
     --bg-alt: #f3f2ef;
@@ -52,6 +53,14 @@ textarea {
 label {
     user-select: none;
 }
+.hint {
+  display: inline-block;
+  color: var(--color-text-grey);
+  font-size: 12px;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
 #content {
     flex: 2;
 }
@@ -323,6 +332,7 @@ dialog {
     border-radius: var(--border-radius);
     font-family: 'Source Sans Pro', sans-serif;
     box-shadow: var(--box-shadow);
+    overflow-x: visible;
 }
 
 .noscrollbar::-webkit-scrollbar {
@@ -369,6 +379,19 @@ dialog {
 #postContent {
     position: relative;
     color: #000000e6;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+#preview-tools {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--bg-alt);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  padding: 0.8rem;
 }
 
 #readMore {
@@ -409,12 +432,12 @@ dialog::backdrop {
     display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
+  
 }
 
-#closePreview {
-    position: absolute;
-    top: 2%;
-    right: 2%;
+.line-clamps {
+  display: flex;
+  flex-direction: row;
 }
 
 #go-to-options {

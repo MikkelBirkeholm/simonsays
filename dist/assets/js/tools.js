@@ -1,5 +1,4 @@
 // Pomodoro
-
 let seconds = document.querySelector(".seconds");
 let minutes = document.querySelector(".minutes");
 let indicator = document.querySelector(".indicator");
