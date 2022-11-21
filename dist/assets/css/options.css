@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-text-dark: #172744;
+    --simon-brown: #7c4e4c;
+    --bg-alt: #f3f2ef;
+    --bg-text-box: #f2f2f2;
+    --color-bg: #ffffff;
+    --highlight-dark: #0a66c2;
+    --box-shadow: 0 4px 5px rgb(0 0 0 / 0.3);
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+p {
+    margin-bottom: 0.4rem;
+}
+
+
+body {
+    width: 600px;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: var(--bg-alt);
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+button {
+    border: none;
+    font-size: 100%;
+    width: fit-content;
+    background-color: var(--highlight-dark);
+    color: var(--bg-text-box);
+    border-radius: 10px;
+    padding: 4px 12px;
+    box-shadow: var(--box-shadow);
+    transition: 100ms ease-out;
+    cursor: pointer;
+}
+
+.profileImage {
+    background-color: #7d8384;
+    background-size: cover;
+    background-position: center;
+    height: 4em;
+    width: 4em;
+    border-radius: 10em;
+    overflow: hidden;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+#profile-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}

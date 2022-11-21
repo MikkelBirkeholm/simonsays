@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">  
+  <link rel="stylesheet" href="/src/css/options.css">
+  <title>Simon Says</title>
+</head>
+<body>
+  <h1>Om Simon Says</h1>
+  <p>Simon Says udvikles af <a href="https://www.linkedin.com/in/mikkelbirkeholm/" target="_blank">Mikkel Birkeholm</a>, og er et værktøj der hjælper dig med at skrive bedre opslag på LinkedIn. Listen med gode råd leveres af <a href="https://www.linkedin.com/in/simonlinde/" target="_blank">Simon Krag Linde</a></p>
+  <p>Når du skriver i editoren gemmes din tekst automatisk, så du kan vende tilbage til den. Når den lille prik i øverste venstre hjørne er grøn, er din tekst gemt.</p>
+  <h2>Profil</h2>
+<div id="profile-settings">
+<label>
+    Navn
+    <input type="text" id="name">
+</label>
+
+<label>
+    Titel
+    <input type="text" id="title">
+</label>
+<div id="profileImageOptions" class="profileImage"></div>
+  <label>
+    Profilbillede
+    <input type="file" id="profile-image-input" accept="image/jpeg, image/png, image/jpg">
+  </label>
+  
+
+<div id="status"></div>
+<button id="save">Gem</button>
+</div>
+
+<script src="src/js/options.js"></script>
+</body>
+</html>
