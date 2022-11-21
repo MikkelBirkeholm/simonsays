@@ -1,6 +1,3 @@
-
-
-
 let tips = document.querySelectorAll('.tip')
 const postPreview = document.querySelector('#postPreview')
 const previewBtn = document.querySelector('#preview-text')
