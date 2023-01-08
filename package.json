@@ -1,7 +1,7 @@
 {
     "name": "ext-test",
     "description": "",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "homepage": "http://chrome.google.com/webstore",
     "author": "Mikkel Birkeholm",
     "repository": {
@@ -51,5 +51,8 @@
                 ]
             }
         ]
+    },
+    "dependencies": {
+        "dotenv": "^16.0.3"
     }
 }

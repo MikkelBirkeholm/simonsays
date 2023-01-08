@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/generator.css" />
+    <script src="assets/js/ai.js" type="module"></script>
+    <title>Simon Says</title>
+  </head>
+  <body>
+    <div class="generator-wrapper">
+      <a href="index.html"><button>Tilbage</button></a>
+      <div class="generator-form">
+        <form novalidate id="ai-form">
+          <textarea
+            id="generator-content"
+            class="noscrollbar"
+            maxlength="3000"
+            rows="10"
+          ></textarea>
+
+          <fieldset>
+            <legend>Handling</legend>
+            <label
+              >Optimer for læsbarhed og klarhed
+              <input
+                type="radio"
+                name="field_cta"
+                id=""
+                value="Optimize the following text for clarity and readability"
+            /></label>
+            <label
+              >Tilføj mere til teksten
+              <input
+                type="radio"
+                name="field_cta"
+                id=""
+                value="Expand the following text"
+            /></label>
+          </fieldset>
+          <fieldset>
+            <legend>Tone</legend>
+            <label
+              ><input
+                type="radio"
+                name="field_tone"
+                id=""
+                value="formal and serious"
+              />Formel og seriøs</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="field_tone"
+                id=""
+                value="light and fun"
+              />Sjov</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="field_tone"
+                id=""
+                value="questioning and wondering"
+              />Undrende</label
+            >
+          </fieldset>
+          <label
+            >Randomness
+            <input
+              type="range"
+              name="field_range"
+              id="field_range"
+              min="0"
+              max="1"
+              step="0.1"
+          /></label>
+          <button id="fetch-btn">Generer post</button>
+          <span class="hint" id="prompt-preview"></span>
+        </form>
+        <textarea
+          class="noscrollbar generator-result"
+          maxlength="3000"
+          rows="10"
+        ></textarea>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+chrome.action.onClicked.addListener((()=>{chrome.tabs.create({url:"/index.html"})})),chrome.runtime.onInstalled.addListener((function(e){let n=chrome.runtime.getURL("onboarding.html");e.reason===chrome.runtime.OnInstalledReason.INSTALL&&chrome.tabs.create({url:n})}));

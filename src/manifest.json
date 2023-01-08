@@ -1,38 +1,24 @@
 {
-    "manifest_version": 3,
-    "version": "0.0.0.1",
-    "name": "Simon Says",
-    "description": "Little helper tool for creating great LinkedIn posts",
-    "permissions": [
-        "storage",
-        "webNavigation",
-        "activeTab",
-        "tabs",
-        "scripting"
-      ],
-      "icons": {
-        "16": "/assets/img/icon16.png",
-        "32": "/assets/img/icon32.png",
-        "48": "/assets/img/icon48.png",
-        "128": "/assets/img/icon128.png"
-      },
-      "options_page": "options.html",
-      "options_ui": {
-        "page": "options.html",
-        "open_in_tab": false
-      },
-    "action": {
-        "default_icon": "/assets/img/icon128.png"
-    },
-    "web_accessible_resources": [
-      {
-        "resources": [ "grammarly.js" ],
-        "matches": [ "https://*/*" ]
-      }
-    ],
-    "host_permissions": ["<all_urls>"],
-        "background": {
-          "service_worker": "background.js",
-          "mode": "module"
-        }
-      }
+  "manifest_version": 3,
+  "version": "0.0.2",
+  "name": "Simon Says",
+  "description": "Et lille værktøj til at skrive bedre LinkedIn-indlæg, fyldt med features, tips og tricks",
+  "permissions": ["storage"],
+  "icons": {
+    "16": "/assets/img/icon16.png",
+    "32": "/assets/img/icon32.png",
+    "48": "/assets/img/icon48.png",
+    "128": "/assets/img/icon128.png"
+  },
+  "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "action": {
+    "default_icon": "/assets/img/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
