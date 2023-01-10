@@ -38,7 +38,7 @@ fetchBtn.onclick = (e) => {
     fetch("https://api.openai.com/v1/completions", {
         body: JSON.stringify(requestBody),
         headers: {
-            Authorization: "Bearer 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",
+            Authorization: "Bearer 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",
             "Content-Type": "application/json"
         },
         method: "POST"
