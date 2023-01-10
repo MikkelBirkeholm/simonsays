@@ -48,5 +48,9 @@ fetchBtn.onclick = (e) => {
             postResult.innerText = data.choices[0].text
             fetchBtn.disabled = false
             fetchBtn.innerText = 'Generer igen'
+        }).catch(error => {
+            console.log(error)
+            fetchBtn.disabled = false
+            postResult.innerText = 'Der skete en fejl:' + error
         })
 }
